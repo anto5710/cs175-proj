@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Final Project - Wind Tunnel</title>
+  <link rel="stylesheet" type="text/css" href="src/styles/style.css" />
+  <link rel="icon" href="./data/icon/trattore_512x512.png">
+</head>
+
+<body class="app-body">
+  <header class="topbar">
+    <div class="topbar-left">
+      <span class="topbar-title">Final Project - Scuderia Trattore Rosa</span>
+    </div>
+    <div class="score-meter">
+      <span class="score-label">Aerodynamic</span>
+      <div class="score-bar">
+        <div class="score-gradient"></div>
+        <div class="score-indicator" id="score-indicator"></div>
+      </div>
+      <span class="score-value" id="score-value">-----</span>
+    </div>
+
+
+    <div class="topbar-right">
+      <label class="ui-button file-button">
+        <input type="file" id="meshFileInput" accept=".xml,.ply,.obj" hidden />
+        Load Mesh
+      </label>
+
+      <label class="ui-toggle">
+        <input type="checkbox" id="toggleDisplayModel" checked />
+        <span class="ui-toggle-indicator"></span>
+        <span class="ui-toggle-text">Show Mesh</span>
+      </label>
+      <button class="ui-button mode-button active" data-mode="velocity">
+        Velocity
+      </button>
+      <button class="ui-button mode-button" data-mode="pressure">
+        Pressure
+      </button>
+      <button class="ui-button mode-button" data-mode="obstacle">
+        Obstacle
+      </button>
+      <button class="ui-button mode-button" data-mode="dye">
+        Dyecolor
+      </button>
+
+      <button class="ui-button rotate-button" id="rotateZModelButton">
+        X⤸
+      </button>
+      <button class="ui-button rotate-button" id="rotateYModelButton">
+        Y⤸
+      </button>
+      <button class="ui-button rotate-button" id="rotateXModelButton">
+        Z⤸
+      </button>
+
+      <button class="ui-button reset-button" id="resetSimButton">
+        ⟳
+      </button>
+    </div>
+  </header>
+
+  <main class="main-area">
+    <canvas id="glcanvas"></canvas>
+  </main>
+  <script type="importmap">
+  {
+    "imports": {
+      "three"         : "https://cdn.jsdelivr.net/npm/three@0.181.2/build/three.module.js",
+      "three/addons/" : "https://cdn.jsdelivr.net/npm/three@0.181.2/examples/jsm/",
+      "dat.gui"       : "https://cdn.jsdelivr.net/npm/dat.gui@0.7.9/build/dat.gui.module.js"
+    }
+  }
+  </script>
+  <script type="module" src="main.js?v=1.1"></script>
+
+</body>
+
+</html>
