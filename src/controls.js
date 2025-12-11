@@ -11,7 +11,7 @@ export class Controls {
 
     const resetButton = document.getElementById("resetSimButton");
     resetButton.addEventListener("click", () => {
-      simulator.resetSimulation();
+      simulator.reset_simulation();
     });
     const rotateZBtn = document.getElementById("rotateZModelButton");
     rotateZBtn.addEventListener("click", () => {
