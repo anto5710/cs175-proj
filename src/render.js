@@ -4,7 +4,7 @@ import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { loadXMLModelOnly as loadModel } from "./loader/xml3D.js";
 import { Vector2 as Vec2, Vector3 as Vec3 } from "three";
 
-const DEFAULT_MODEL_PATH = "./data/models/cyl_robot.xml";
+const DEFAULT_MODEL_PATH = "./data/models/ply/cow.ply";
 const SHADER_DIR = "./src/shaders";
 const ITER = 15;
 const SLICES = 8;
